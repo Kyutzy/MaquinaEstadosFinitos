@@ -1,5 +1,5 @@
 # MaquinaEstadosFinitos
-#Cesar Cunha Ziobro
+# Cesar Cunha Ziobro
 Para  obter  os  pontos  relativos  a  este  trabalho,  você  deverá  criar  um  programa,  utilizando  a 
 linguagem  Python, C, ou C++.  Este  programa,  quando  executado,  irá  determinar  se  uma  string de 
 entrada  faz  parte  da  linguagem  𝐿    definida  por  𝐿 = {𝑥 | 𝑥 ∈
