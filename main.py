@@ -15,7 +15,7 @@ bbabbaaab
 """
 
 import os
-
+letras = ["a", "b", "c"]
 def ler_arquivo(arquivo): #start
     conteudo = ""
     with open(arquivo, 'r') as arquivo:
@@ -25,6 +25,8 @@ def ler_arquivo(arquivo): #start
 
 def recebeA(a:str):
     for letra in range(len(list(a))):
+        if a[letra] not in letras:
+            return f"{a}: Não pertence"
         if a[letra] == 'a':
             if recebeB(a, letra):
                 pass
@@ -45,9 +47,12 @@ def recebeB(b, num):
 
 
 if __name__ == "__main__":
-    for file in os.listdir("./"):
-        if file.endswith(".txt"):
-            arquivo = ler_arquivo(file)
-            numero = int(arquivo[0])
-            for palavra in range(numero):
-                print(recebeA(arquivo[palavra+1]))
+    try:
+        for file in os.listdir("./"):
+            if file.endswith(".txt"):
+                arquivo = ler_arquivo(file)
+                numero = int(arquivo[0])
+                for palavra in range(numero):
+                    print(recebeA(arquivo[palavra+1]))
+    except IndexError:
+        print("File Overflow")
